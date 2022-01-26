@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
 
 class App extends Component {
+
+    state = {
+        language: 'english'
+    }
+
     render() {
         return (
-            <div>
-                App
+            <div className="ui container">
+                <div>
+                    Select a Language:
+                    <i className="flag us" />
+                    <i className="flag nl" />
+                </div>
             </div>
         );
     }
