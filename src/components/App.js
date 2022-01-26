@@ -6,14 +6,24 @@ class App extends Component {
         language: 'english'
     }
 
+    // onLanguageChange = language => {
+    //     this.setState({ language: language })
+    // }
+    // refactor below since key and value are the same
+
+    onLanguageChange = language => {
+        this.setState({ language })
+    }
+
     render() {
         return (
             <div className="ui container">
                 <div>
                     Select a Language:
-                    <i className="flag us" />
-                    <i className="flag nl" />
+                    <i className="flag us" onClick={() => this.onLanguageChange('english')} />
+                    <i className="flag nl" onClick={() => this.onLanguageChange('dutch')} />
                 </div>
+                {this.state.language}
             </div>
         );
     }
