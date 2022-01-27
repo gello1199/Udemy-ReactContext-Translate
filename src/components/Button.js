@@ -1,4 +1,5 @@
 // Accessing data with Consumers
+// use to access multiple context objects
 
 import React, { Component } from 'react';
 import LanguageContext from '../contexts/LanguageContext';
@@ -22,6 +23,7 @@ class Button extends Component {
 export default Button;
 
 // using this.contextType
+// use to access a single context object
 
 // import React, { Component } from 'react';
 // import LanguageContext from '../contexts/LanguageContext';
