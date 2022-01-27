@@ -13,11 +13,14 @@ class Button extends Component {
     render() {
         return (
             <ColorContext.Consumer>
-                <button className="ui button primary">
-                    <LanguageContext.Consumer>
-                        {(value) => this.renderSubmit(value)}
-                    </LanguageContext.Consumer>
-                </button>
+                {(color) =>
+                    <button className={`ui button ${color}`}>
+                        <LanguageContext.Consumer>
+                            {(value) => this.renderSubmit(value)}
+                        </LanguageContext.Consumer>
+                    </button>
+                }
+                
             </ColorContext.Consumer>
         );
     }
