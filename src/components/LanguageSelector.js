@@ -16,10 +16,6 @@ class LanguageSelector extends Component {
                 className="flag nl" 
                 onClick={() => this.context.onLanguageChange('dutch')} 
             />
-             <i 
-                className="flag it" 
-                onClick={() => this.context.onLanguageChange('italy')} 
-            />
         </div>
         );
     }
